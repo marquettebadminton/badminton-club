@@ -1,0 +1,283 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    color: limegreen;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/badminton.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    color: limegreen;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: limegreen;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Announcements Section */
+.announcements-section {
+    background-color: white;
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.announcements-section h2 {
+    color: limegreen;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.announcements-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: limegreen;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Home Section */
+.about-section {
+    background: url('../images/badminton.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;   /* Align content to the top vertically */
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 0;
+}
+
+.about-section .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;   /* Align content to the top of overlay */
+    text-align: center;
+    min-height: 0;
+    padding: 30px 20px 10px 20px; /* 30px space from the very top, 10px below */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.school-name {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 6px;
+    margin-bottom: 10px; /* Equal space below */
+}
+
+.club-name {
+    font-size: 4em;
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    margin-bottom: 1px; /* Equal space below */
+    color: white;
+    letter-spacing: 2px;
+}
+
+.details {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 0; /* No extra space below */
+}
+
+/* Sticky Navigation Bar */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #006400; /* Dark green */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-nav nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo left, menu right */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+}
+
+.navbar-brand {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-decoration: none;
+    margin-right: 40px; /* Space between logo and menu */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand span {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+}
+
+.sticky-nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Ensures menu items stay in one line */
+    justify-content: flex-end; /* Align menu items to the right */
+    width: 100%;
+}
+
+.sticky-nav .menu li {
+    display: block;
+}
+
+.sticky-nav .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: normal;
+    padding: 6px 8px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sticky-nav .menu a:hover {
+    background: white;
+    color: #006400;
+}
+
+/* Override conflicting general nav styles */
+nav {
+    margin: 0;
+}
+
+/* Remove conflicting menu styles */
+nav .menu {
+    display: none; /* Hide general menu styles to avoid conflicts */
+}
+
+/* Responsive: Stack menu only on very small screens */
+@media (max-width: 768px) {
+    .sticky-nav nav {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 10px 24px;
+    }
+    .navbar-brand {
+        margin-bottom: 10px; /* Space between brand and menu when stacked */
+    }
+    .sticky-nav .menu {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+#home {
+    scroll-margin-top: 80px; /* Adjust to your navbar height */
+}
